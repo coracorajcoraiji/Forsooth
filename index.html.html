@@ -267,7 +267,7 @@ footer{background:var(--black);padding:48px 0;border-top:1px solid var(--border)
               <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             </defs>
             <!-- Taiwan island - realistic shape -->
-            <path d="M148,12 C152,10 158,9 163,10 C170,11 178,15 185,22 C191,28 195,36 197,46 C198,54 197,63 195,72 C193,80 190,86 187,92 C184,98 181,104 179,112 C177,120 176,130 175,142 C174,152 173,163 172,174 C171,186 170,198 170,210 C170,222 170,233 169,244 C168,255 167,266 166,276 C165,286 163,296 161,305 C158,315 155,324 151,332 C147,340 143,348 138,355 C133,362 127,368 120,372 C113,376 106,378 99,377 C92,376 86,373 81,368 C76,363 72,356 69,348 C66,340 64,331 63,321 C62,311 62,301 63,291 C64,281 66,272 68,263 C70,254 73,245 75,236 C77,227 79,218 80,208 C80,198 80,188 79,178 C78,168 76,158 75,148 C74,138 73,128 73,118 C74,108 76,98 79,89 C82,80 86,72 91,65 C96,58 102,52 109,47 C116,42 123,38 131,35 C138,32 144,30 148,28 Z" fill="#1a2820" stroke="rgba(184,150,90,0.55)" stroke-width="1.5"/>
+            <path style="transform: scaleX(1.26) translateY(13px); transform-origin: 20% center;" d="M148,12 C152,10 158,9 163,10 C170,11 178,15 185,22 C191,28 195,36 197,46 C198,54 197,63 195,72 C193,80 190,86 187,92 C184,98 181,104 179,112 C177,120 176,130 175,142 C174,152 173,163 172,174 C171,186 170,198 170,210 C170,222 170,233 169,244 C168,255 167,266 166,276 C165,286 163,296 161,305 C158,315 155,324 151,332 C147,340 143,348 138,355 C133,362 127,368 120,372 C113,376 106,378 99,377 C92,376 86,373 81,368 C76,363 72,356 69,348 C66,340 64,331 63,321 C62,311 62,301 63,291 C64,281 66,272 68,263 C70,254 73,245 75,236 C77,227 79,218 80,208 C80,198 80,188 79,178 C78,168 76,158 75,148 C74,138 73,128 73,118 C74,108 76,98 79,89 C82,80 86,72 91,65 C96,58 102,52 109,47 C116,42 123,38 131,35 C138,32 144,30 148,28 Z" fill="#1a2820" stroke="rgba(184,150,90,0.55)" stroke-width="1.5"/>
             <!-- Central mountain range -->
             <path d="M155,30 C153,60 151,90 150,120 C149,150 149,180 148,210 C147,240 146,270 144,300 C142,325 139,348 135,365" fill="none" stroke="rgba(184,150,90,0.13)" stroke-width="1.5" stroke-dasharray="3,6"/>
             <!-- Penghu -->
@@ -433,12 +433,14 @@ function buildMap() {
     grp.addEventListener('click', () => showCity(city));
     g.appendChild(grp);
   });
+  /*
   [{'l':'30+ 項','c':'#e8b84b'},{'l':'10–29 項','c':'#c9954a'},{'l':'5–9 項','c':'#a67a3e'},{'l':'1–4 項','c':'#7a5c2e'}].forEach(item => {
     const div=document.createElement('div'); div.className='legend-item';
     const dot=document.createElement('div'); dot.className='legend-dot'; dot.style.background=item.c;
     const lbl=document.createElement('span'); lbl.textContent=item.l;
     div.appendChild(dot); div.appendChild(lbl); legend.appendChild(div);
   });
+  */
 }
 
 function showCity(city) {
