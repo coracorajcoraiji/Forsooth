@@ -253,14 +253,7 @@ footer{background:var(--black);padding:48px 0;border-top:1px solid var(--border)
     <div class="section-divider"></div>
     <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:48px;line-height:1.8">全台共 <strong style="color:var(--gold-light)">143</strong> 項工程實績，遍佈 <strong style="color:var(--gold-light)">14</strong> 個縣市。點擊地圖上的熱點查看各地工程項目。</p>
     <div class="map-container">
-      <div># 1. 告訴 Git 衝突的 index.html 已經修好了
-git add index.html
-
-# 2. 提交這次的合併紀錄
-git commit -m "解決 index.html 衝突並更新"
-
-# 3. 完美推上 GitHub
-git push origin main
+      <div>
         <div class="taiwan-map-wrap">
           <svg viewBox="0 0 260 440" xmlns="http://www.w3.org/2000/svg" id="taiwan-svg">
             <defs>
@@ -492,7 +485,7 @@ function submitInquiry(e) {
       t.style.background = 'var(--gold)';
       form.reset();
     } else {
-      t.textContent = '⚠ 送出失敗，請直��來電或寄信聯繫我們。';
+      t.textContent = '⚠ 送出失敗，請直接來電或寄信聯繫我們。';
       t.style.background = '#c0392b';
     }
     t.classList.add('show');
